@@ -40,7 +40,20 @@ let options2 = [
 ];
 
 for(let option of options2) {
-    let anchor = document.createElement("a");
+    const ul = document.createElement("ul");
+    ul.className = "footer-ul";
+
+    const list = document.createElement("li");
+    list.className = "footer-ul-item";
+
+    const anchor = document.createElement("a");
+    anchor.className = "footer-anchor";
+    anchor.textContent = option.title;
+    anchor.href = option.linkTo;
     
+    list.appendChild(anchor);
+    ul.appendChild(list);
+
+    footerSelector.appendChild(ul);
 }
 
