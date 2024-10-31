@@ -44,7 +44,7 @@ for(let option of options2) {
     ul.className = "footer-ul";
 
     const list = document.createElement("li");
-    list.className = "footer-ul-item";
+    list.className = "footer-main-item";
 
     const anchor = document.createElement("a");
     anchor.className = "footer-anchor";
@@ -54,6 +54,19 @@ for(let option of options2) {
     list.appendChild(anchor);
     ul.appendChild(list);
 
+    for(let opt of option.ls){
+        const li = document.createElement("li");
+        li.className = "footer-li";
+
+        const anchor = document.createElement("a");
+        anchor.className = "footer-anchor";
+        anchor.textContent = opt;
+
+        li.appendChild(anchor);
+        ul.appendChild(li);
+    }
+
     footerSelector.appendChild(ul);
 }
+
 
