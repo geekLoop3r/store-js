@@ -24,4 +24,6 @@ const prod2 = new Product("2ab", "Iphone 16pro", 3500, 6, imgProd2, false, [blac
 const prod3 = new Product("3ac", "zte redmagic9", 4500, 7, imgProd3, false, [black, blue, gray], 'Dual SIM 512 GB cyclone 16 GB RAM');
 const prod4 = new Product("4ad", "asus TUF", 4999, 4, imgProd4, false, [black, pink], 'Gaming A15 15.6" AMD Ryzen 5');
 const prod5 = new Product("5ae", "ipad pro11", 4450, 6, imgProd5, false, [black, white], 'Wifi M4 256GB Space Black');
-const prod6 = new Product("6af", "macbook pro" , 4300, 3, imgProd6, false, [black, gray, white], 'con Chip M1 CPU 8 núcleos y GPU 7 núcleos, 8GB RAM, 256 GB SSD ')
+const prod6 = new Product("6af", "macbook pro" , 4300, 3, imgProd6, false, [black, gray, white], 'con Chip M1 CPU 8 núcleos y GPU 7 núcleos, 8GB RAM, 256 GB SSD');
+
+let setProducts = [prod1, prod2, prod3, prod4, prod5, prod6];
