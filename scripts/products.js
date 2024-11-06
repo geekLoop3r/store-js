@@ -1,51 +1,27 @@
 class Product {
-    constructor(id, title, price, stock, images, onsale, supplier, colors, description) {
+    constructor(id, title, price = 0, stock = 0, images = [], onsale = false, discount = 0, colors = '', description = '') {
         this.id = id;
         this.title = title;
         this.price = price;
         this.stock = stock;
         this.images = images;
         this.onsale = onsale;
-        this._supplier = supplier;
-        this.colors = [];
+        this.discount = discount;
+        this.colors = colors;
         this.description = description;
     }
-
-    // Método getters y setters
-    get getSupplier() {
-        return this._supplier;
-    }
-
-    set setSupplier(newName) {
-        this._supplier = newName;
-    }
-
-    sellUnits(units) {
-        if(this.stock >= units) {
-            this.stock = this.stock - units;
-        }else{
-            console.log(`Solo existen ${this.stock} unidades de stock, no es posible realizar la compra`);
-        }
-	}
-
 }
 
-const prod1 = new Product("1234aaa", "Iphone 14", 4000, 12, "https://oechsle.vteximg.com.br/arquivos/ids/17874187-1500-1500/image-a14b5570f2db42eb94c6c2a64595e7e6.jpg?v=638489010898130000", false, [black, blue], "Description del primer producto");
-const prod2 = new Product("1234aaa", "Iphone 14", 4000, 12, "https://oechsle.vteximg.com.br/arquivos/ids/17874187-1500-1500/image-a14b5570f2db42eb94c6c2a64595e7e6.jpg?v=638489010898130000", false, [black, blue], "Description del segundo producto");
-const prod3 = new Product("1234aaa", "Iphone 15", 4000, 12, "https://oechsle.vteximg.com.br/arquivos/ids/17874187-1500-1500/image-a14b5570f2db42eb94c6c2a64595e7e6.jpg?v=638489010898130000", false, [black, blue], "Description del tercer producto");
-const prod4 = new Product("1234aaa", "Iphone 15", 4000, 12, "https://oechsle.vteximg.com.br/arquivos/ids/17874187-1500-1500/image-a14b5570f2db42eb94c6c2a64595e7e6.jpg?v=638489010898130000", false, [black, blue], "Description del cuarto producto");
+const imgProd1 = ['/img/audio/audifonos-skullcandy1.webp','/img/audio/audifonos-skullcandy2.webp', '/img/audio/audifonos-skullcandy3.webp'];
+const imgProd2 = ['/img/celulares/iphone16pro-1.webp', '/img/celulares/iphone16pro-2.webp'];
+const imgProd3 = ['/img/celulares/zte-redmagic9-1.webp', '/img/celulares/zte-redmagic9-2.webp', '/img/celulares/zte-redmagic9-2.webp'];
+const imgProd4 = ['/img/laptops/asusTUF-1.webp', '/img/laptops/asusTUF-2.webp', '/img/laptops/asusTUF-3.webp'];
+const imgProd5 = ['/img/tablets/ipadpro11-1.webp'];
+const imgProd6 = ['/img/tablets/macbookpro-1.webp', '/img/tablets/macbookpro-2.webp'];
 
-const products = [prod1, prod2, prod3, prod4];
-
-
-// Agregamos dos elementos al array
-products.unshift(prod5); // agregando un elemento al inicio del array
-products.push(prod6); // agregando un elemendo al final del array
-
-console.log(products);
-
-// Eliminar elementos del array
-products.shift();
-products.pop();
-
-console.log(products);
+const prod1 = new Product("1aa", "Audifonos Skullcandy", 250, 8, imgProd1, false, [black, blue], 'Audifonos inalambricos que anulan el sonido externo');
+const prod2 = new Product("2ab", "Iphone 16pro", 3500, 6, imgProd2, false, [black, blue], 'Chip bionic A18');
+const prod3 = new Product("3ac", "zte redmagic9", 4500, 7, imgProd3, false, [black, blue, gray], 'Dual SIM 512 GB cyclone 16 GB RAM');
+const prod4 = new Product("4ad", "asus TUF", 4999, 4, imgProd4, false, [black, pink], 'Gaming A15 15.6" AMD Ryzen 5');
+const prod5 = new Product("5ae", "ipad pro11", 4450, 6, imgProd5, false, [black, white], 'Wifi M4 256GB Space Black');
+const prod6 = new Product("6af", "macbook pro" , 4300, 3, imgProd6, false, [black, gray, white], 'con Chip M1 CPU 8 núcleos y GPU 7 núcleos, 8GB RAM, 256 GB SSD ')
