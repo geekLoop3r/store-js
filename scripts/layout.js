@@ -39,6 +39,7 @@ let options2 = [
     {linkTo:"./delivery.html", title: "Garantía de entrega", ls: []},
 ];
 
+// Creación dinámica del footer
 for(let option of options2) {
     const ul = document.createElement("ul");
     ul.className = "footer-ul";

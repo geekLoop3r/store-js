@@ -1,5 +1,6 @@
 //const productsSelector = document.getElementById("products");
 
+// Template de nuestras cards 
 function createCard(product) {
     return `
         <a href="./details.html?id=${product.id}" class="product-card">

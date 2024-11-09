@@ -56,6 +56,7 @@ header .container {
 }
 
 .nav {
+    width: 60%;
     padding: 10px 0;
     display: flex;
     justify-content: space-between;
@@ -70,19 +71,15 @@ header .container {
     padding: 0;
 }
 
-.nav ul li a {
+.nav-button {
     color: white;
     font-weight: 500;
     text-align: left;
     text-decoration: none;
 }
 
-.nav ul li a:hover {
+.nav-button:hover {
     text-decoration: underline;
-}
-
-.nav ul .in-live a{
-    font-weight: 700;
 }
 
 /*----------Hero section----------*/
@@ -352,21 +349,22 @@ footer .container {
     justify-content: space-between;
 }
 
-.columns-container .col ul {
+.footer-ul {
     list-style-type: none;
     padding: 0;
 }
 
-.columns-container .col ul li {
+.footer-main-item  {
     padding: 5px 0;
-}
-
-.columns-container .col ul li.col-main-item {
     font-weight: bold;
     padding-bottom: 20px;
 }
 
-.columns-container .col ul li a {
+.footer-li {
+    padding: 5px 0;
+}
+
+.footer-anchor {
     color: white;
     text-decoration: none;
 }
